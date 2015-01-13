@@ -42,9 +42,12 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.tasks.Shell>
+    <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
+      <pythonName>System-CPython-2.7</pythonName>
+      <nature>shell</nature>
       <command>cd test/main/lib/cloud/aws &amp;&amp; python TestVpcAWS.py -f</command>
-    </hudson.tasks.Shell>
+      <ignoreExitCode>false</ignoreExitCode>
+    </jenkins.plugins.shiningpanda.builders.PythonBuilder>
   </builders>
   <publishers/>
   <buildWrappers/>

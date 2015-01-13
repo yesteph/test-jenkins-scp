@@ -45,7 +45,7 @@
     <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
       <pythonName>System-CPython-2.7</pythonName>
       <nature>shell</nature>
-      <command>python -m unittest discover -s test/main/lib/cloud -p &apos;Test*.py&apos;</command>
+      <command>python -m unittest discover -s test/main/lib/cloud -p &apos;*UT.py&apos;</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.PythonBuilder>
   </builders>

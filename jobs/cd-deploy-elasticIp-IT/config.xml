@@ -45,7 +45,7 @@
     <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
       <pythonName>System-CPython-2.7</pythonName>
       <nature>shell</nature>
-      <command>python -m unittest discover -s test/main/lib/cloud/aws -p &apos;ElasticIp_IT.py&apos;</command>
+      <command>cd test/main/lib/cloud/aws &amp;&amp; python -m unittest discover -p &apos;ElasticIp_IT.py&apos; --failfast</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.PythonBuilder>
   </builders>

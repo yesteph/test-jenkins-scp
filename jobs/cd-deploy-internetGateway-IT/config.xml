@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Exécution des tests d&apos;intégration concernant l&apos;object address (elastic ip) boto dans l&apos;environnement d&apos;Amazon.</description>
+  <description>Exécution des tests d&apos;intégration concernant l&apos;object internetGateway boto dans l&apos;environnement d&apos;Amazon.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.plugins.hipchat.HipChatNotifier_-HipChatJobProperty plugin="hipchat@0.1.8">
@@ -45,7 +45,7 @@
     <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
       <pythonName>System-CPython-2.7</pythonName>
       <nature>shell</nature>
-      <command>python -m unittest discover -s test/main/lib/cloud/aws -p &apos;ElasticIp_IT.py&apos;</command>
+      <command>python -m unittest discover -s test/main/lib/cloud/aws -p &apos;InternetGateway_IT.py&apos;</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.PythonBuilder>
   </builders>

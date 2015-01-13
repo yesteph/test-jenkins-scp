@@ -43,7 +43,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cd test/main/lib/cloud/aws &amp;&amp; python TestVpcAWS -f</command>
+      <command>cd test/main/lib/cloud/aws &amp;&amp; python TestVpcAWS.py -f</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

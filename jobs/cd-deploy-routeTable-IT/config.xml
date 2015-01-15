@@ -42,7 +42,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>cd-deploy-dhcpOptionSet-IT</upstreamProjects>
+      <upstreamProjects>cd-deploy-dhcpOptionSetAWS-IT</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>

@@ -27,7 +27,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>salt &apos;*&apos; test.ping</command>
+      <command>salt &apos;*&apos; test.ping -l debug</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

@@ -44,7 +44,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>pwd
-fab.sh -l</command>
+./fab.sh -l</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

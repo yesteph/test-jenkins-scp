@@ -39,24 +39,13 @@
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <jenkins.triggers.ReverseBuildTrigger>
-      <spec></spec>
-      <upstreamProjects>cd-deploy-securityGroupAWS-IT</upstreamProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </jenkins.triggers.ReverseBuildTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
       <pythonName>System-CPython-2.7</pythonName>
       <nature>shell</nature>
-      <command>cd test/main/lib/cloud/aws &amp;&amp; python -m unittest discover -p &apos;DhcpOptionSetAWS_IT.py&apos; --failfast</command>
+      <command>fab.sh -l</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.PythonBuilder>
   </builders>

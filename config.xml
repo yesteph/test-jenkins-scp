@@ -73,6 +73,7 @@
         <string>cd-deploy-vpcAWS-IT</string>
         <string>cd-deploy-vpcPeeringAWS-IT</string>
         <string>test</string>
+        <string>test-fab</string>
       </jobNames>
       <jobFilters/>
       <columns>

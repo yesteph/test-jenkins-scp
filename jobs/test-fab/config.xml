@@ -45,6 +45,7 @@
     <hudson.tasks.Shell>
       <command>pwd
 echo $USER
+echo &quot;HAHA&quot;
 ./fab.sh -l</command>
     </hudson.tasks.Shell>
   </builders>

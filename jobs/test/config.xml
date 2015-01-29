@@ -33,7 +33,7 @@
   <publishers/>
   <buildWrappers>
     <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.4.1">
-      <colorMapName>xterm</colorMapName>
+      <colorMapName>vga</colorMapName>
     </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
   </buildWrappers>
 </project>

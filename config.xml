@@ -60,6 +60,18 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>cd-deploy-dhcpOptionSetAWS-IT</string>
+        <string>cd-deploy-elasticIpAWS-IT</string>
+        <string>cd-deploy-instanceAWS-IT</string>
+        <string>cd-deploy-internetGatewayAWS-IT</string>
+        <string>cd-deploy-networkInterfaceAWS-IT</string>
+        <string>cd-deploy-routeTableAWS-IT</string>
+        <string>cd-deploy-securityGroupAWS-IT</string>
+        <string>cd-deploy-subnetAWS-IT</string>
+        <string>cd-deploy-UT</string>
+        <string>cd-deploy-volumeAWS-IT</string>
+        <string>cd-deploy-vpcAWS-IT</string>
+        <string>cd-deploy-vpcPeeringAWS-IT</string>
       </jobNames>
       <jobFilters/>
       <columns>

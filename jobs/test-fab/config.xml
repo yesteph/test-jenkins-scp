@@ -42,12 +42,10 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
-      <pythonName>System-CPython-2.7</pythonName>
-      <nature>shell</nature>
-      <command>fab.sh -l</command>
-      <ignoreExitCode>false</ignoreExitCode>
-    </jenkins.plugins.shiningpanda.builders.PythonBuilder>
+    <hudson.tasks.Shell>
+      <command>pwd
+fab.sh -l</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers/>

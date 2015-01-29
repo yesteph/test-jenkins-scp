@@ -23,12 +23,12 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>http://vod.canal-bis.com/stash/scm/devops/cd-deploy.git</url>
-        <credentialsId>b6f98e2a-2517-4af1-ba37-fb668554649d</credentialsId>
+        <credentialsId>64423946-b1e4-43b1-9de6-51c8498df5e5</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>bugfix/COR-380-creation-montage-de-disques-data</name>
+        <name>master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>

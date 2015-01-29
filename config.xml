@@ -72,6 +72,7 @@
         <string>cd-deploy-volumeAWS-IT</string>
         <string>cd-deploy-vpcAWS-IT</string>
         <string>cd-deploy-vpcPeeringAWS-IT</string>
+        <string>test</string>
       </jobNames>
       <jobFilters/>
       <columns>

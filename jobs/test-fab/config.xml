@@ -46,7 +46,8 @@
       <command>pwd
 echo $USER
 echo &quot;HAHA&quot;
-./fab.sh -l</command>
+./fab.sh -l
+salt &apos;*&apos; test.ping</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

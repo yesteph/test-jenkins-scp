@@ -44,10 +44,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>pwd
-echo $USER
-echo &quot;HAHA&quot;
-./fab.sh -l
-salt &apos;*&apos; test.ping</command>
+./fab.sh load:aws/eu-west-1-service-network,filter_name=service-elk-sg network.create</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

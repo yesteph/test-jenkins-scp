@@ -44,7 +44,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>pwd
-./fab.sh load:aws/hapi/mos,filter_name=hapi-mosfabric-nginx01 vm.create</command>
+./fab.sh load:aws/hapi/mos vm.create</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

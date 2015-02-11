@@ -44,7 +44,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>pwd
-./fab.sh load:aws/eu-west-1-service,filter_name=service-coprod-elk01 vm.create</command>
+./fab.sh load:aws/hapi-mos vm.create</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

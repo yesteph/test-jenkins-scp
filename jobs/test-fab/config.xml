@@ -44,7 +44,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>pwd
-./fab.sh load:aws/hapi/mos vm.create</command>
+./fab.sh load:aws/hapi/mos vm.create vm.wait_provisioning</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

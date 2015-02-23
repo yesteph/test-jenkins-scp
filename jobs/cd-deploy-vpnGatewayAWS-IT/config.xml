@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>Exécution des tests d&apos;intégration concernant l&apos;object DhcpOptionSet boto dans l&apos;environnement d&apos;Amazon.</description>
+  <description>Exécution des tests d&apos;intégration concernant l&apos;object vpnGateway boto dans l&apos;environnement d&apos;Amazon.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.plugins.hipchat.HipChatNotifier_-HipChatJobProperty plugin="hipchat@0.1.8">
@@ -42,7 +42,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>cd-deploy-securityGroupAWS-IT</upstreamProjects>
+      <upstreamProjects>cd-deploy-instanceAWS-IT</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -56,7 +56,7 @@
     <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
       <pythonName>System-CPython-2.7</pythonName>
       <nature>shell</nature>
-      <command>cd test/main/lib/cloud/aws &amp;&amp; python -m unittest discover -p &apos;DhcpOptionSetAWS_IT.py&apos; --failfast</command>
+      <command>cd test/main/lib/cloud/aws &amp;&amp; python -m unittest discover -p &apos;VpnGatewayAWS_IT.py&apos; --failfast</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.PythonBuilder>
   </builders>

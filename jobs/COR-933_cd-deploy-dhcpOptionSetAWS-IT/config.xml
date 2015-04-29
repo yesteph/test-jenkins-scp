@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.plugins.hipchat.HipChatNotifier_-HipChatJobProperty plugin="hipchat@0.1.8">
+      <room></room>
+      <startNotification>false</startNotification>
+      <notifySuccess>false</notifySuccess>
+      <notifyAborted>false</notifyAborted>
+      <notifyNotBuilt>false</notifyNotBuilt>
+      <notifyUnstable>false</notifyUnstable>
+      <notifyFailure>false</notifyFailure>
+      <notifyBackToNormal>false</notifyBackToNormal>
+    </jenkins.plugins.hipchat.HipChatNotifier_-HipChatJobProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.22">
+      <autoRebuild>false</autoRebuild>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.3.4">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>http://vod.canal-bis.com/stash/scm/devops/cd-deploy.git</url>
+        <credentialsId>64423946-b1e4-43b1-9de6-51c8498df5e5</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>feature/COR-933-provisionning-boto-integrer-les-auto</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec></spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>COR-933_cd-deploy-securityGroupAWS-IT</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <jenkins.plugins.shiningpanda.builders.PythonBuilder plugin="shiningpanda@0.21">
+      <pythonName>System-CPython-2.7</pythonName>
+      <nature>shell</nature>
+      <command>cd test/main/lib/cloud/aws &amp;&amp; python -m unittest discover -p &apos;DhcpOptionSetAWS_IT.py&apos; --failfast</command>
+      <ignoreExitCode>false</ignoreExitCode>
+    </jenkins.plugins.shiningpanda.builders.PythonBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
